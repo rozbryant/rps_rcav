@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RockPaperScissors</title>
+  <%= stylesheet_link_tag    'game', media: 'all' %>
+  <%= javascript_include_tag 'game' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+      <p><a href="/rock"> Play Rock </a></p>
+      <p><a href="/paper">Play Paper</a></p>
+      <p><a href="/scissors">Play Scissors</a></p>
+
+    <p>You chose:</p>
+    <%= @user_move %>
+
+    <p>Computer chose:</p>
+    <%= @computer_move %>
+
+<p>    <% if @user_move == @computer_move %>
+      "You're tied!!"
+    <% elsif @user_move == "rock" && @computer_move == "paper" %>
+      "You lose!!"
+    <% elsif @user_move == "rock" && @computer_move == "scissors" %>
+      "You win!!"
+<% end %>
+</p>
+
+</body>
+</html>

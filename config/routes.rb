@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
-  get("/rock", {:controller => "game", :action => "user_plays_rock"})
-  get("/paper", {:controller => "game", :action => "user_plays_paper"})
-  get("/scissors", {:controller => "game", :action => "user_plays_scissors"})
+  get("/", {:controller => "rock", :action => "user_plays_rock"})
+  get("/rock", {:controller => "rock", :action => "user_plays_rock"})
+  get("/paper", {:controller => "paper", :action => "user_plays_paper"})
+  get("/scissors", {:controller => "scissors", :action => "user_plays_scissors"})
 
 
   # The priority is based upon order of creation: first created -> highest priority.
