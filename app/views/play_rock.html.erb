@@ -8,29 +8,46 @@
 </head>
 <body>
 
-
-    <p>You chose:</p>
-    <%= @user_move %>
-    <img src = "/assets/images/rock.png">
-
-    <p>Computer chose:</p>
-    <%= @computer_move %>
+  <div class = "row">
+    <div class = "col-md-4 col-md-offset-2 col-xs-6">
+      <div class = "panel panel-success">
+        <div class = "panel-heading">
+          <h2 class = "panel-title text-center">
+            <%= @user_move %>
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel-body">
+    <img class="img-responsive" src = "/assets/images/rock.png" width="300">
+</div>
+<div class="col-md-4 col-xs-6">
+  <div class="panel panel-danger">
+    <div class="panel-heading">
+      <h2 class="panel-title text-center">
+        <%= @computer_move %>
+      </h2>
+    </div>
+  </div>
+  <div class="panel-body">
     <% if @computer_move = "rock" %>
-    <img src = "/assets/images/rock.png">
+    <img src = "/assets/images/rock.png" width="300">
     <% elsif @computer_move = "paper" %>
-    <img src = "/assets/images/paper.png">
+    <img src = "/assets/images/paper.png" width="300">
     <% elsif @computer_move = "scissors" %>
-    <img src = "/assets/images/scissors.png">
-<% end %>
-
-<p>    <% if @user_move == @computer_move %>
+    <img src = "/assets/images/scissors.png" width="300">
+    <% end %>
+  </div>
+</div>
+<div class="row">
+  <% if @user_move == @computer_move %>
       "You're tied!!"
     <% elsif @user_move == "rock" && @computer_move == "paper" %>
       "You lose!!"
     <% elsif @user_move == "rock" && @computer_move == "scissors" %>
       "You win!!"
 <% end %>
-</p>
-
+</div>
 </body>
 </html>

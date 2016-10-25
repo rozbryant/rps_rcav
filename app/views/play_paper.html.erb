@@ -20,17 +20,17 @@
   <img src = "/assets/images/paper.png">
   <% elsif @computer_move = "scissors" %>
   <img src = "/assets/images/scissors.png">
-<% end %>
+  <% end %>
 
 
-<p>  <% if @user_move == @computer_move %>
-  You're tied!!
-<% elsif @user_move == "paper" && @computer_move == "rock" %>
-  You win!!
-<% elsif @user_move == "paper" && @computer_move == "scissors" %>
-  You lose!!
-<% end %>
-</p>
+  <p>  <% if @user_move == @computer_move %>
+    You're tied!!
+    <% elsif @user_move == "paper" && @computer_move == "rock" %>
+    You win!!
+    <% elsif @user_move == "paper" && @computer_move == "scissors" %>
+    You lose!!
+    <% end %>
+  </p>
 
 </body>
 </html>
