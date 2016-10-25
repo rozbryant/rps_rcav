@@ -1,10 +1,31 @@
-<h1>Street &rarr; Coords Lookup</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RockPaperScissors</title>
+  <%= stylesheet_link_tag    'game', media: 'all' %>
+  <%= javascript_include_tag 'game' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
 
-<form action="/game">
-  <div>
-    <label for="the_move">Your Move</label>
-    <input type="text" name="user_move" id="the_move">
-  </div>
+      <p><a href="/rock"> Play Rock </a></p>
+      <p><a href="/paper">Play Paper</a></p>
+      <p><a href="/scissors">Play Scissors</a></p>
 
-  <button>Play Your Move</button>
-</form>
+    <p>You chose:</p>
+    <%= @user_move %>
+
+    <p>Computer chose:</p>
+    <%= @computer_move %>
+
+<p>  <% if @user_move == @computer_move %>
+  You're tied!!
+<% elsif @user_move == "paper" && @computer_move == "rock" %>
+  You win!!
+<% elsif @user_move == "paper" && @computer_move == "scissors" %>
+  You lose!!
+<% end %> 
+</p>
+
+</body>
+</html>

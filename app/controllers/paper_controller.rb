@@ -14,13 +14,7 @@ class PaperController < ApplicationController
 
     @user_move = path_as_move
 
-    if @user_move == @computer_move
-      puts "You're tied!!"
-    elsif @user_move == "paper" && @computer_move == "rock"
-      puts "You win!!"
-    elsif @user_move == "paper" && @computer_move == "scissors"
-      puts "You lose!!"
-    end
+    
 
     render("/play_paper.html.erb")
   end
